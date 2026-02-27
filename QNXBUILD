@@ -1,0 +1,8 @@
+0) (for sanity) replace toybox grep with grep grep
+1) sudo apk add libidn2 libidn2-dev zstd zstd-dev nghttp2 nghttp2-dev libpsl libpsl-dev gnutls gnutls-dev pcre2-dev
+2) download wget source tarball
+3) ./configure --prefix=<install location> --disable-nls
+4) make
+5) make install
+
+Notes: no gpgme, libhsts, microhttpd, libidn, and gnutls-dane in app repos. Configure can't find liblz when lz4 installed.
