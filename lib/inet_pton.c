@@ -44,7 +44,7 @@
 int
 rpl_inet_pton (int af, const char *restrict src, void *restrict dst)
 {
-  return inet_pton (af, src, dst);
+  return __inet_pton (af, src, dst);
 }
 
 #else

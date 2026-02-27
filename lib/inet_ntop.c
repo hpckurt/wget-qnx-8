@@ -55,7 +55,7 @@ const char *
 rpl_inet_ntop (int af, const void *restrict src,
                char *restrict dst, socklen_t cnt)
 {
-  return inet_ntop (af, src, dst, cnt);
+  return __inet_ntop (af, src, dst, cnt);
 }
 
 #else

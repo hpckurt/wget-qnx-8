@@ -556,6 +556,11 @@ getlocalename_l_unsafe (int category, locale_t locale)
         }
 #  endif
 # endif
+#elif defined __QNX__
+      /* QNX? */
+      if (locale == (locale_t) 2)
+        return (struct string_with_storage) { "C.UTF-8", STORAGE_INDEFINITE };
+      return (struct string_with_storage) { "C", STORAGE_INDEFINITE };
 #elif HAVE_NAMELESS_LOCALES
       /* OpenBSD >= 6.2, AIX >= 7.1 */
       return get_locale_t_name_unsafe (category, locale);
